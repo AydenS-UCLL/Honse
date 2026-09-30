@@ -61,5 +61,9 @@ src/
 
 State is in memory: refreshing the page resets the demo.
 
+## Hosted website
+
+https://deft-begonia-9fb3c6.netlify.app/
+
 ----
 ***Brought to you by Team Honse***
