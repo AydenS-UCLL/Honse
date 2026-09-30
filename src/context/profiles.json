@@ -1,0 +1,82 @@
+[
+  {
+    "id": "moving-alex",
+    "name": "Moving Alex",
+    "headline": "Lease ends in 30 days, new place signed",
+    "location": "Austin, TX",
+    "address": {
+      "current": "1108 Rio Grande St, Apt 4B, Austin, TX 78701",
+      "type": "rental",
+      "lease_ends_in_days": 30,
+      "new_address": "452 Elm St, Austin, TX 78704",
+      "deposit_held_usd": 1450
+    },
+    "providers": [
+      { "category": "internet", "name": "Spectrum", "account": "SPEC-88213", "monthly_usd": 79.99 },
+      { "category": "energy", "name": "Austin Energy", "account": "AE-4471902", "monthly_usd": 132.4 },
+      { "category": "bank", "name": "Chase", "account": "****4417", "monthly_usd": 0 },
+      { "category": "insurance", "name": "Lemonade (Renter's)", "account": "LEM-99120", "monthly_usd": 14.5 }
+    ],
+    "finances": {
+      "monthly_net_income_usd": 5100,
+      "savings_balance_usd": 8200,
+      "subscriptions_count": 3,
+      "subscriptions_monthly_usd": 42,
+      "dining_delivery_this_month_usd": 410,
+      "dining_delivery_3mo_avg_usd": 395
+    },
+    "open_tickets": [
+      {
+        "id": "TCK-1001",
+        "source": "landlord",
+        "subject": "Notice of lease end — move-out inspection required",
+        "status": "open",
+        "received_at": "2026-09-12"
+      }
+    ],
+    "events": [
+      { "type": "lease_signed", "at": "2026-09-20", "payload": { "address": "452 Elm St", "monthly_rent_usd": 1795 } },
+      { "type": "lease_end_notice", "at": "2026-09-12", "payload": { "days_remaining": 30 } }
+    ]
+  },
+  {
+    "id": "overspending-jordan",
+    "name": "Overspending Jordan",
+    "headline": "Burn rate spiking, emergency fund shrinking",
+    "location": "Chicago, IL",
+    "address": {
+      "current": "915 W Belmont Ave, Chicago, IL 60657",
+      "type": "rental",
+      "lease_ends_in_days": 244,
+      "new_address": null,
+      "deposit_held_usd": 1200
+    },
+    "providers": [
+      { "category": "internet", "name": "Xfinity", "account": "XF-20114", "monthly_usd": 94.0 },
+      { "category": "energy", "name": "ComEd", "account": "CE-7781234", "monthly_usd": 118.75 },
+      { "category": "bank", "name": "Ally", "account": "****9032", "monthly_usd": 0 },
+      { "category": "mobile", "name": "Verizon", "account": "VZ-55210", "monthly_usd": 85.0 }
+    ],
+    "finances": {
+      "monthly_net_income_usd": 4200,
+      "savings_balance_usd": 980,
+      "subscriptions_count": 8,
+      "subscriptions_monthly_usd": 185,
+      "dining_delivery_this_month_usd": 1450,
+      "dining_delivery_3mo_avg_usd": 906
+    },
+    "open_tickets": [
+      {
+        "id": "TCK-2001",
+        "source": "ComEd",
+        "subject": "Your bill increased 38% vs last month",
+        "status": "open",
+        "received_at": "2026-09-24"
+      }
+    ],
+    "events": [
+      { "type": "bill_increased", "at": "2026-09-24", "payload": { "provider": "ComEd", "amount": 45 } },
+      { "type": "low_balance_warning", "at": "2026-09-27", "payload": { "balance_usd": 980 } }
+    ]
+  }
+]
