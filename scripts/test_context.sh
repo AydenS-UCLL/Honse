@@ -14,6 +14,9 @@ curl -s "$API/moving-alex" | head -40
 echo; echo "== 3. GET /profiles/moving-alex/suggestions"
 curl -s "$API/moving-alex/suggestions"
 
+echo; echo "== 3b. Overview + engine (should say \"llm\" when GEMINI_API_KEY is set)"
+curl -s "$API/moving-alex/suggestions" | grep -E '"(engine|llm_error|headline|summary)"'
+
 echo; echo "== 4. GET /profiles/overspending-jordan/suggestions"
 curl -s "$API/overspending-jordan/suggestions"
 

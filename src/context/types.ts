@@ -58,6 +58,32 @@ export type Suggestion = {
   source?: "llm" | "heuristic";
 };
 
+export type Tone = "good" | "warn" | "risk" | "neutral";
+
+export type Highlight = {
+  label: string;
+  value: string;
+  tone: Tone;
+};
+
+/** Plain-language picture of the user's current situation, shown above the suggestions. */
+export type Overview = {
+  headline: string;
+  summary: string;
+  highlights: Highlight[];
+  risk_level: "low" | "medium" | "high";
+  source: "llm" | "heuristic";
+};
+
+export type AnalysisResult = {
+  profile_id: string;
+  overview: Overview;
+  suggestions: Suggestion[];
+  engine: "llm" | "heuristic";
+  /** Why Gemini was skipped (missing key, rate limit, bad JSON...). Only set on fallback. */
+  llm_error?: string;
+};
+
 export const AVAILABLE_TOOLS: Tool[] = [
   {
     name: "Address Change Pipeline",
